@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 @RestController
 public class CoffeeShopController {
@@ -22,7 +21,7 @@ public class CoffeeShopController {
                         .coffeeName(kind.getTitle())
                         .price(buildMoneyWith(kind.getPrice()))
                         .build()
-        ).collect(Collectors.toList());
+        ).toList();
 
         var response = new CoffeeListResponse();
         response.setCoffeeList(list);

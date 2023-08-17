@@ -1,5 +1,10 @@
 package com.coffee.house.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum CoffeeKind {
     ESPRESSO("Espresso", 50.0),
     LATTE("Latte", 80.0),
@@ -8,18 +13,5 @@ public enum CoffeeKind {
 
     private final String title;
     private final double price;
-
-    CoffeeKind(String title, double price) {
-        this.title = title;
-        this.price = price;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public double getPrice() {
-        return price;
-    }
 
 }
